@@ -1,5 +1,6 @@
 package com.example.android.dagger.registration
 
+import com.example.android.dagger.di.ActivityScope
 import com.example.android.dagger.registration.enterdetails.EnterDetailsFragment
 import com.example.android.dagger.registration.termsandconditions.TermsAndConditionsFragment
 import dagger.Subcomponent
@@ -11,7 +12,10 @@ import dagger.Subcomponent
  * Subcomponents are components that inherit and extend the object graph of a parent component.
  * Thus all objects providedin the parent component will be provided in the subcomponent too. in t
  * his way, an object form a subcomponent can depend on an object provided by the parent component
+ *
+ * @ActivityScope: Classes annotated with @ActivityScope will have a unique instance in this Component.
  */
+@ActivityScope
 @Subcomponent
 interface RegistrationComponent {
 
